@@ -1,0 +1,18 @@
+|Todo|
+Idea-5 Small Talk!!
+
+--------------------------------------------------------------
+
+|Done|
+Idea-11 Random Quotes!=:Completed:
+Idea-1 Jokes!=:Completed:
+Idea-4 Get The Time!=:Completed:
+Idea-8 Sleep Command!=:Completed:
+Idea-2 Send Emails!=:Completed:
+Idea-10 Make Notes!=:Completed:
+Idea 12- Get some news!=:Completed:
+Idea-9 Search Google, Maps, Youtube!=:Completed:
+Idea-3 Search Wikipedia!=:Completed:
+Idea-7 Interact With The %windir% Folder!=:Completed: 
+Idea-4 Open Any Programs!=:Completed:
+Idea-6 Interact With the sys, os and shutil Libs=:Completed:
