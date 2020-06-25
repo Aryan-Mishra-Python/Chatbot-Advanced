@@ -88,16 +88,16 @@ def change_background():
     """This Function changes the desktop background randomly"""
     backgrounds = ["E:\\Aryan\\Most Advanced Chatbot\\Images\\First.png",
                    "E:\\Aryan\\Most Advanced Chatbot\\Images\\Second.png",
-                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Third.png", 
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Third.png",
                    "E:\\Aryan\\Most Advanced Chatbot\\Images\\Fourth.png",
-                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Fifth.jpg", 
-                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Sixth.jpg", 
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Fifth.jpg",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Sixth.jpg",
                    "E:\\Aryan\\Most Advanced Chatbot\\Images\\Seventh.png",
-                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Eighth.jpg", 
-                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Nineth.jpg", 
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Eighth.jpg",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Nineth.jpg",
                    "E:\\Aryan\\Most Advanced Chatbot\\Images\\Tenth.jpg",
-                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Eleventh.jpg", 
-                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Twelth.jpg", 
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Eleventh.jpg",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Twelth.jpg",
                    "E:\\Aryan\\Most Advanced Chatbot\\Images\\Thirteenth.jpg"]
 
 
@@ -297,3 +297,25 @@ def search_it(question):
         print(results)
 
     print("\n")
+
+
+def matrix(rowone, rowtwo, rowthree):
+    """The Classic  matrix!
+    Remember whenever this gets called your are in a trouble!
+    """
+    lstone = [[[[0 for col in range(rowone)] for col in range(rowtwo)] for col in range(rowthree)]]
+    lsttwo = [[[[1 for col in range(rowone)] for col in range(rowtwo)] for col in range(rowthree)]]
+    lst = lstone + lsttwo
+    return lst
+def run_matrix():
+    """To run the matrix when it gets called!"""
+    dimensions = input("Input:\n")
+    dimensionslist = dimensions.split()
+    dimensionslist.remove("x")
+    dimensionslist.remove("x")
+    if len(dimensionslist) == 3:
+        col1 = int(dimensionslist[0])
+        col2 = int(dimensionslist[1])
+        row = int(dimensionslist[2])
+        while True:
+            print(matrix(col1, col2, row))

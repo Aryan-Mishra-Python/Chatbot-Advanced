@@ -23,7 +23,6 @@ def get_quote():
     print(line)
 
 
-
 # To Get A Joke!
 def joke():
     """Well everybody loves jokes isn't it?"""
@@ -32,7 +31,6 @@ def joke():
 
 
 # To get the current time
-
 def get_time():
     """This Function Gets The current Time!"""
     time = strftime("%c")
@@ -65,6 +63,7 @@ def send_email(reciver, content):
 
 
 
+
 # To Write a note
 def make_note(name, content, title="Not Provided"):
     """This Function simply makes notes!"""
@@ -82,22 +81,34 @@ def make_note(name, content, title="Not Provided"):
     file.close()
 
 
+
+
 # To Change the background of the desktop
 def change_background():
     """This Function changes the desktop background randomly"""
-    backgrounds = ["First.png",
-                   "Second.png", "Third.png", "Fourth.png",
-                   "Fifth.jpg", "Sixth.jpg", "Seventh.png",
-                   "Eighth.jpg", "Nineth.jpg", "Tenth.jpg",
-                   "Eleventh.jpg", "Twelth.jpg", "Thirteenth.jpg"]
+    backgrounds = ["E:\\Aryan\\Most Advanced Chatbot\\Images\\First.png",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Second.png",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Third.png",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Fourth.png",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Fifth.jpg",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Sixth.jpg",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Seventh.png",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Eighth.jpg",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Nineth.jpg",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Tenth.jpg",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Eleventh.jpg",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Twelth.jpg",
+                   "E:\\Aryan\\Most Advanced Chatbot\\Images\\Thirteenth.jpg"]
+
 
     path = choice(backgrounds)
     print(f"Changing Background To: '{path}'")
     ctypes.windll.user32.SystemParametersInfoW(20, 0, str(path), 0)
 
 
-# To Get the latest news
 
+
+# To Get the latest news
 def get_news(true_or_false=False):
     """This Function Open News Eithier Virtually or a text-based version of it from google news"""
     if true_or_false is True:
@@ -116,6 +127,8 @@ def get_news(true_or_false=False):
             print(news.title.text)
             print(news.pubDate.text)
             print("="*60)
+
+
 
 def search_google(query):
     """This Function Searches Google Engine Based On The query
@@ -140,6 +153,8 @@ def search_youtube(video):
     Output: Youtube Opened With The query - Tech With Tim
     """
     os.startfile(f"https://www.youtube.com/results?search_query={video}")
+
+
 
 
 def get_wiki(topic, get_virtual=False, lang="en"):
@@ -241,6 +256,7 @@ def move(file, dest):
     shutil.move(file, dest)
 
 
+
 def make_folder(name):
     """This function makes a floder is exists overwrites it BE CAREFUL WITH IT!"""
     os.mkdir(name)
@@ -281,3 +297,22 @@ def search_it(question):
         print(results)
 
     print("\n")
+
+
+def matrix(rowone, rowtwo, rowthree):
+    """The Classic  matrix!"""
+    lstone = [[[[0 for col in range(rowone)] for col in range(rowtwo)] for col in range(rowthree)]]
+    lsttwo = [[[[1 for col in range(rowone)] for col in range(rowtwo)] for col in range(rowthree)]]
+    lst = lstone + lsttwo
+    return lst
+
+DIMENSIONS = input("Input:\n")
+DIMENSIONSLIST = DIMENSIONS.split()
+DIMENSIONSLIST.remove("x")
+DIMENSIONSLIST.remove("x")
+if len(DIMENSIONSLIST) == 3:
+    COL1 = int(DIMENSIONSLIST[0])
+    COL2 = int(DIMENSIONSLIST[1])
+    ROW = int(DIMENSIONSLIST[2])
+    while True:
+        print(matrix(COL1, COL2, ROW))
