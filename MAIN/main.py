@@ -1,4 +1,4 @@
-""" This File is the skeleton for the file-to-be-created 'main.py' """
+# Neccary Imports
 import os
 import ctypes
 from random import choice
@@ -13,6 +13,9 @@ from bs4 import BeautifulSoup as soup
 import wikipedia
 import winshell
 from googlesearch import search
+
+
+# Functions and Method Defintions
 
 
 # To Generate random Quotes
@@ -325,10 +328,14 @@ def run_matrix():
 
 
 
+
+
+# Particular defintions for Chatbot
+
 def what_you_do(___name):
     """This Function helps the user!"""
-    print("Hey", ___name, "Looks like you're in trouble right now?")
-    print("But Don't worry, Here's What I can help you with!\n")
+    print("Hey", ___name)
+    print("Here's What I can help you with!\n\n")
 
     print("If You Love To Hear Quotes from Famous Personality, I can help!")
     print("Similarly I you'd like some jokes, I cam help!")
@@ -343,7 +350,7 @@ def what_you_do(___name):
     print("Bored Of Opening Programs From The ExploreR Window?, I can help!")
     print("Copy, Paste, Make, Delete, Rename Files, Folders and Directories, Without a Right-Click!")
     print("If Interested Matrix, It Is Also Here To Play With!\n")
-    print("MORE NEW FEATURES ARIVING SOON!")
+    print("MORE NEW FEATURES ARIVING SOON!\n\n")
 
 
 def wish_good_morning():
@@ -359,28 +366,35 @@ def wish_good_morning():
 
 
 
-# Global Vars
-GOOD_MORNING_STRS = ["good morning", "morning, alpha", "hi", "hello", "howdy", "how are you"]
-HELP_STRS = ["what can you do", "help", "what are you capable of"]
-NAME = input("Your Name: \n")
 
-while True:
-    TEXT = input("You: \n").lower()
 
-    # Checking if the user says a greet
-    for greet in GOOD_MORNING_STRS:
-        if greet in TEXT:
-            wish_good_morning()
 
-    # Checking if the user wants some help
-    for _help in HELP_STRS:
-        if _help in TEXT:
-            what_you_do(NAME)
 
-    if "bye" in TEXT:
-        print("\n")
-        print(f"See'you later, {NAME}!")
-        break
 
-    if "quote" in TEXT:
-        pass
+
+if __name__ == '__main__':
+    # Global Vars
+    GOOD_MORNING_STRS = ["good morning", "morning, alpha", "hi", "hello", "howdy", "how are you"]
+    HELP_STRS = ["what can you do", "help", "what are you capable of"]
+    NAME = input("Your Name: \n")
+
+    while True:
+        TEXT = input("You: \n").lower()
+
+        # Checking if the user says a greet
+        for greet in GOOD_MORNING_STRS:
+            if greet in TEXT:
+                wish_good_morning()
+
+        # Checking if the user wants some help
+        for _help in HELP_STRS:
+            if _help in TEXT:
+                what_you_do(NAME)
+
+        if "bye" in TEXT:
+            print("\n")
+            print(f"See'you later, {NAME}!")
+            break
+
+        if "quote" in TEXT:
+            pass
